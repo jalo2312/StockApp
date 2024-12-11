@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/scroll"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contraint2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:context=".herramientas.Herramientas2">
+
+            <TextView
+                android:id="@+id/title_herramientas"
+                android:layout_width="206dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="36dp"
+                android:text="Herramientas Asignadas"
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/codigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:ems="10"
+                android:hint="Codigo"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_herramientas" />
+
+            <EditText
+                android:id="@+id/descripcion"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:ems="10"
+                android:hint="Descripción"
+                android:inputType="text"
+                app:layout_constraintStart_toEndOf="@+id/codigo"
+                app:layout_constraintTop_toBottomOf="@+id/title_herramientas" />
+
+            <EditText
+                android:id="@+id/estadoher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="50dp"
+                android:ems="10"
+                android:hint="Estado"
+                android:inputType="text"
+                app:layout_constraintStart_toEndOf="@+id/descripcion"
+                app:layout_constraintTop_toBottomOf="@+id/title_herramientas" />
+
+            <TextView
+            android:id="@+id/titulo"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.027"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03" />
+
+
+            <Button
+                android:id="@+id/agregar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Agregar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.363"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cedulas" />
+
+
+            <ImageView
+                android:id="@+id/btn_refresh"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/pngwingcom"
+                android:text="Actualizar"
+                app:layout_constraintStart_toEndOf="@+id/tableRow"
+                app:layout_constraintTop_toBottomOf="@+id/actualizar" />
+
+            <Button
+                android:id="@+id/actualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Actualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.083"
+                app:layout_constraintStart_toEndOf="@+id/agregar"
+                app:layout_constraintTop_toBottomOf="@+id/cedulas" />
+
+            <EditText
+                android:id="@+id/entrega"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Entrega(dd/mm/aaaa)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/codigo" />
+
+            <EditText
+                android:id="@+id/devolucion"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Devolucion(dd/mm/aaaa)"
+                app:layout_constraintStart_toEndOf="@+id/entrega"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion" />
+
+            <EditText
+                android:id="@+id/observacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Observación"
+                android:inputType="text"
+                app:layout_constraintStart_toEndOf="@+id/devolucion"
+                app:layout_constraintTop_toBottomOf="@+id/estadoher" />
+
+
+            <TableRow
+                android:id="@+id/tableRow"
+                android:layout_width="680dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/agregar">
+
+                <TextView
+                    android:id="@+id/codigoText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Codigo"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/descripcionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Descripcion"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/estadoText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+
+                    android:text="Estado"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/entregaText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+
+                    android:text="Entrega"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/devolucionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Devolucion"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/observacionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Observacion"
+                    android:textColor="@android:color/black"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/exp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Expedición"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ven"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Vencimiento"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cedula"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Cedula"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+
+
+            </TableRow>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listas"
+                android:layout_width="870dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+            <Spinner
+                android:id="@+id/cedulas"
+                android:layout_width="210dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/vencimientoText"
+                app:layout_constraintTop_toBottomOf="@+id/observacion" />
+
+            <EditText
+                android:id="@+id/expedicionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Expedicion(dd/mm/yyyy)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/entrega" />
+
+            <EditText
+                android:id="@+id/vencimientoText"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="19dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Vencimiento(dd/mm/yyyy)"
+                app:layout_constraintStart_toEndOf="@+id/expedicionText"
+                app:layout_constraintTop_toBottomOf="@+id/devolucion" />
+
+            <Button
+                android:id="@+id/pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="20dp"
+                android:text="PDF"
+                app:layout_constraintStart_toEndOf="@+id/actualizar"
+                app:layout_constraintTop_toBottomOf="@+id/cedulas" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+</ScrollView>
